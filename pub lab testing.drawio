@@ -1,0 +1,76 @@
+<mxfile host="Electron" modified="2023-04-12T14:39:08.377Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="r98nOdcKenoN0wEIHSJt" version="21.1.2" type="device">
+  <diagram name="Page-1" id="6z0Dl4aJw8HFYp6H6zV8">
+    <mxGraphModel dx="182" dy="609" grid="1" gridSize="10" guides="1" tooltips="0" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-1" value="Pub" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-2" value="name : string&lt;br&gt;till : float&lt;br&gt;drinks : { }" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-3" value="increase_till (amount)&lt;br&gt;add_drinks (drink)&lt;br&gt;stock_value ( )&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-4" value="Drink" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-5" value="name : string&lt;br&gt;price : float&lt;br&gt;alcohol_level : int" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-7" value="Customer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-8" value="name : string&lt;br&gt;wallet : float&lt;br&gt;age : int&lt;br&gt;drunkeness_level : int" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="350" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-9" value="buy_drink (drink, pub)&lt;br&gt;reduce_wallet (amount)&lt;br&gt;check_age ( )&lt;br&gt;increase_drunkenness_level (drink)&lt;br&gt;check_drunkenness_level ( )&lt;br&gt;decrease_drunkenness_level (food)&lt;br&gt;buy_food (food, pub )" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-10" value="Food" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="300" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-11" value="name : string&lt;br&gt;price : float&lt;br&gt;rejuvenation_level : int" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="370" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-12" value="" style="endArrow=none;html=1;rounded=0;exitX=1.008;exitY=0.641;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.381;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bbOdkMH_SAM_J6rwZTtk-7" target="bbOdkMH_SAM_J6rwZTtk-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="380" as="sourcePoint" />
+            <mxPoint x="300" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-13" value="" style="endArrow=none;html=1;rounded=0;entryX=0.187;entryY=1.02;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.59;exitY=0.005;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="bbOdkMH_SAM_J6rwZTtk-7" target="bbOdkMH_SAM_J6rwZTtk-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="300" as="sourcePoint" />
+            <mxPoint x="200" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-14" value="" style="endArrow=none;html=1;rounded=0;exitX=0.085;exitY=0.02;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.157;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bbOdkMH_SAM_J6rwZTtk-7" target="bbOdkMH_SAM_J6rwZTtk-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="300" as="sourcePoint" />
+            <mxPoint x="90" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-15" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.005;entryY=0.398;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bbOdkMH_SAM_J6rwZTtk-1" target="bbOdkMH_SAM_J6rwZTtk-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="150" as="sourcePoint" />
+            <mxPoint x="200" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bbOdkMH_SAM_J6rwZTtk-18" value="" style="endArrow=none;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.94;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bbOdkMH_SAM_J6rwZTtk-1" target="bbOdkMH_SAM_J6rwZTtk-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="380" as="sourcePoint" />
+            <mxPoint x="340" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
