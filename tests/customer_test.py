@@ -2,6 +2,7 @@ import unittest
 from src.customer import Customer
 from src.pub import Pub
 from src.drink import Drink
+from src.food import Food
 
 
 
@@ -11,6 +12,7 @@ class TestCustomer(unittest.TestCase):
         self.customer2 = Customer("Sally", 50, 16)
         self.drink1 = Drink("Belhaven Best", 10, 1)
         self.pub1 = Pub("Red Lion", 500)
+        self.food1 = Food("beans on toast", 2, 1) 
 
     # A Customer should have a name, and a wallet  
     def test_has_name(self):
@@ -56,7 +58,10 @@ class TestCustomer(unittest.TestCase):
         self.assertEqual(500, self.pub1.till) #till increased with customer1 sale, no change shows that customer2 could not buy as underage.
         self.assertEqual(0,self.customer2.drunkenness_level)
 
-    
+    def test_decrease_drunkenness_level(self):
+        self.customer1.buy_drink(self.drink1, self.pub1)
+        self.customer1.decrease_drunkenness_level(self.food1)
+        self.assertEqual(0, self.customer1.drunkenness_level)
 
 
 

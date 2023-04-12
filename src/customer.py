@@ -23,3 +23,6 @@ class Customer:
                 self.reduce_wallet(drink.price)
                 pub.increase_till(drink.price)
                 self.increase_drunkenness_level(drink)
+
+    def decrease_drunkenness_level(self, food):
+        self.drunkenness_level -= food.rejuvenation_level
