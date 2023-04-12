@@ -7,7 +7,10 @@ from src.drink import Drink
 
 class TestCustomer(unittest.TestCase):
     def setUp(self):
-        self.customer1 = Customer("Frank", 100)
+        self.customer1 = Customer("Frank", 100, 18)
+        self.customer2 = Customer("Sally", 50, 16)
+        self.drink1 = Drink("Belhaven Best", 10, 1)
+        self.pub1 = Pub("Red Lion", 500)
 
     # A Customer should have a name, and a wallet  
     def test_has_name(self):
@@ -22,12 +25,38 @@ class TestCustomer(unittest.TestCase):
         self.customer1.reduce_wallet(10)
         self.assertEqual(90, self.customer1.wallet)
 
-    def test_buy_drink(self):
-        drink1 = Drink("Belhaven Best", 10)
-        pub1 = Pub("Red Lion", 500)
-        self.customer1.buy_drink(drink1, pub1)
+    def test_check_age__pass(self):
+        self.assertEqual(True, self.customer1.check_age())
+
+    def test_check_age__fail(self):
+        self.assertEqual(False, self.customer2.check_age())
+
+    def test_increase_drunkenness_level(self):
+        self.customer1.increase_drunkenness_level(self.drink1)
+        self.assertEqual(1, self.customer1.drunkenness_level)
+
+    def test_check_drunkenness_level__pass(self):
+        self.assertEqual(True, self.customer2.check_drunkenness_level())
+
+    def test_check_drunkenness_level__fail(self):
+        self.customer1.buy_drink(self.drink1, self.pub1)
+        self.customer1.buy_drink(self.drink1, self.pub1)
+        self.customer1.buy_drink(self.drink1, self.pub1)
+        self.assertEqual(False, self.customer1.check_drunkenness_level())
+
+    def test_buy_drink_1(self):
+        self.customer1.buy_drink(self.drink1, self.pub1)
         self.assertEqual(90, self.customer1.wallet)
-        self.assertEqual(510, pub1.till)
+        self.assertEqual(510, self.pub1.till)
+        self.assertEqual(1,self.customer1.drunkenness_level)
+
+    def test_buy_drink_2(self):
+        self.customer2.buy_drink(self.drink1, self.pub1)
+        self.assertEqual(50, self.customer2.wallet)
+        self.assertEqual(500, self.pub1.till) #till increased with customer1 sale, no change shows that customer2 could not buy as underage.
+        self.assertEqual(0,self.customer2.drunkenness_level)
+
+    
 
 
 

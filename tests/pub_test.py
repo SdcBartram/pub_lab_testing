@@ -5,8 +5,8 @@ from src.drink import Drink
 class TestPub(unittest.TestCase):
     def setUp(self):
         self.pub1 = Pub("Red Lion", 500)
-        self.drink1 = Drink("Belhaven Best", 10)
-        self.drink2 = Drink("Guinness", 8)
+        self.drink1 = Drink("Belhaven Best", 10, 1)
+        self.drink2 = Drink("Guinness", 8, 1)
         self.pub1.drinks = [self.drink1, self.drink2]
     
     # A Pub should have a name, a till, and a collection of drinks
