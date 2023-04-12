@@ -5,7 +5,8 @@ from src.drink import Drink
 class TestDrink(unittest.TestCase):
     def setUp(self):
         self.drink1 = Drink("Budweiser", 12)
-        
+
+# A Drink should have a name, and a price        # 
     def test_has_name(self):
         self.assertEqual("Budweiser", self.drink1.name)
 
